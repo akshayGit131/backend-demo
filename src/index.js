@@ -5,4 +5,6 @@ dotenv.config({
     path:'env'
 })
 
-connectDB()
+connectDB().then().catch((err)=>{
+    console.log("MONGO DB connection failed",err)
+})
